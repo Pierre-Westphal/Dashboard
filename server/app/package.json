@@ -1,0 +1,34 @@
+{
+  "name": "dashboard-server",
+  "version": "1.0.0",
+  "description": "Dashboard",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npm run fulldoc && nodemon src/main.js",
+    "local": "npm run fulldoc && export DB_HOST=localhost DB_USER=postgres DB_PASSWORD=postgres; npm start",
+    "apidoc": "apidoc -i src/ -o apidoc",
+    "doc": "jsdoc src/ ../README.md -r -d doc",
+    "fulldoc": "npm run doc && npm run apidoc"
+  },
+  "author": "adrien.rocourt@epitech.eu, pierre1.westphal@epitech.eu",
+  "license": "",
+  "dependencies": {
+    "apidoc": "^0.25.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsdoc": "^3.6.6",
+    "nodemon": "^2.0.6",
+    "pg": "^8.5.1"
+  },
+  "apidoc": {
+    "name": "Dashboard",
+    "version": "1.0.0",
+    "description": "Dashboard",
+    "apidoc": {
+      "title": "ApiDoc",
+      "url": "https://api.github.com/v1"
+    }
+  }
+}
